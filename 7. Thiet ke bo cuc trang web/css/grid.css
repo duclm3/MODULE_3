@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    /*Chúng ta thiết lập giá trị box-sizing cho thuộc tính border-box của tất cả các thẻ. 
+    Thiết lập này có nghĩa là phần padding và border của các thành phần đều được tính vào trong
+    tổng chiểu rộng hay chiều cao của các thành phần (xem lại bài Box Model để biết cách tính chiều rộng hoặc chiều cao).
+    Vậy thì nếu bây giờ bạn muốn làm cho phần tử của mình phải giữ nguyên kích thước
+    mặc dù có cộng thêm padding và border thì sẽ cần phải dùng đến thuộc tính box-sizing.
+    */
+}
+#menu {
+    width: 25%;
+    float: left;
+}
+#main {
+    width: 75%;
+    float: left;
+}

@@ -1,0 +1,128 @@
+body{
+    font-family: Arial, Tahoma;
+    font-size: 12px;
+}
+
+#main{
+    width: 1000px;
+    padding: 10px; /*Khoảng cách từ border của main đến nội dung của main (padding)*/
+    margin-left: auto;  /* margin left right :auto tự động căn giữa */
+    margin-right: auto;
+}
+
+#head{
+    height: 100px;
+    background-color: #F5F5F5;
+    border: 1px solid #CDCDCD;
+    margin-bottom:5px; /*Khoảng cách phần phần tử div so với phần tử khác */
+    position: relative;
+}
+
+#head-link{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #CDCDCD;
+    background-color: #F5F5F5;
+    margin-bottom:5px; /*Khoảng cách */
+    clear: both;
+    position: relative;
+    /* text-align:center;  */
+
+    /*background cho cả khối nhưng nội dung sẽ cách đường viền right left 10px*/
+}
+
+#left{
+    width: 150px;
+    min-height: 400px;
+    border: 1px solid #CDCDCD;
+    float:left;
+    background-color: #004C00;
+    margin-bottom: 5px;
+}
+
+#content{
+    width: 600px;
+    min-height: 400px;
+    border: 1px solid #CDCDCD;
+    float:left;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#right{
+    width: 234px;
+    min-height: 400px;
+    border: 1px solid #CDCDCD;
+    float:right;
+    margin-bottom: 5px;
+}
+
+#footer{
+    height: 50px;
+    clear: both;
+    border: 1px solid #CDCDCD;
+    background-color: #F8F8FF;
+}
+#head-link{
+    height: 30px;
+    padding:0;
+    margin:0;
+    background-color: #000000;
+    border: 1px solid #CDCDCD;
+}
+ 
+#head-link ul, #head-link li{
+    padding:0;
+    margin:0;
+}
+
+#head-link li{
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding:0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#head-link li a{
+    width:100px;
+    height: 30px;
+    display: block;
+    text-decoration:none;
+    text-align: center;
+    line-height: 30px;
+    background-color: black;
+    color: white;
+}
+ 
+#head-link ul ul li a{
+    width: 200px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#head-link li a:hover{
+     background-color: red;
+}
+
+#head-link ul li ul{
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    visibility: hidden;
+}
+
+#head-link ul li:hover > ul{
+    visibility: visible;
+}
+#head-link ul ul ul{
+    position: absolute;
+    top:0;
+    left:210px;
+    visibility:hidden;
+}

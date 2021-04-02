@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title>Layout</title>
+        <style>
+            header {
+                position: relative;
+            }
+            .shopping-mall {
+                margin-top: auto;
+                font-variant: small-caps;
+            }
+            .shopping-mall>h1 {
+                font-family: Impact;
+                font-size: 50px;
+                color: white;
+                letter-spacing: 0.3px;
+                text-shadow: 0 0 2px black;
+                padding-bottom: 0px;
+                border-bottom: 1px dotted gray;
+                margin: 0px;
+                width: 49%;
+            }
+            .shopping-mall>h5 {
+                margin-top: 5px;
+                letter-spacing: 0.5px;
+                font-size: small;
+            }
+            .poly-cart{
+                margin-top: 5px;
+            }
+            .poly-cart ul {
+                padding: 0px;
+                margin: 0px;
+                list-style: none;
+                font-variant: small-caps;
+            }
+            .poly-cart .panel-heading strong {
+                font-variant: small-caps;
+                font-size: larger;
+                text-shadow: 0 0 2px darkgray;
+            }
+            .poly-prod{
+                text-align:center;
+                padding:5px;
+            }
+            .poly-prod .panel-body img{
+                height: 150px;
+                max-width: 95%;
+            }
+            .card-title {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 16px;
+                color: inherit;
+            }
+            a.list-group-item, button.list-group-item {
+                color: #555;
+            }
+        </style>
+     </head>
+     <body>
+     <div class="container" style = "height: auto">
+        <!-- header -->
+        <header class="row">
+            <div class="col-sm-8 shopping-mall">
+                <h1>Online shopping mall</h1>
+                <h5>The center point of the professional programming</h5>
+              </div>
+              <img class="col-sm-4" src="istockphoto.jpg" />
+        </header>
+    
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"> <span class="glyphicon glyphicon-home"></span> Trang chủ</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon "></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <span class="glyphicon glyphicon-list-alt"></span>  
+                    Giới thiệu <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="glyphicon glyphicon-earphone"></span> Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                    <span class="glyphicon glyphicon-envelope"></span> Góp ý</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp
+                    </a>
+                  </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="glyphicon glyphicon-user"></span> Tài khoản 
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+        
+        <div class = "row">
+            <article class="col-sm-9">
+                <div class="col-sm-3 poly-prod">
+                    <div class="card card-default">
+                      <div class="card-header">
+                        <h4 class="card-title">
+                          Nokia
+                        </h4>
+                      </div>
+                      <div class="card-body"> 
+                        <img src="nokia.jpg"  style="object-fit:cover;width:100%;height:100%"/></div>
+                      <div class="card-footer">
+                        $ 100.25
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 poly-prod">
+                    <div class="card card-default">
+                      <div class="card-header">
+                        <h4 class="card-title">
+                          Nokia
+                        </h4>
+                      </div>
+                      <div class="card-body"> 
+                        <img src="nokia.jpg"  style="object-fit:cover;width:100%;height:100%"/></div>
+                      <div class="card-footer">
+                        $ 100.25
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 poly-prod">
+                    <div class="card card-default">
+                      <div class="card-header">
+                        <h4 class="card-title">
+                          Nokia
+                        </h4>
+                      </div>
+                      <div class="card-body"> 
+                        <img src="nokia.jpg"  style="object-fit:cover;width:100%;height:100%"/></div>
+                      <div class="card-footer">
+                        $ 100.25
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 poly-prod">
+                    <div class="card card-default">
+                      <div class="card-header">
+                        <h4 class="card-title">
+                          Nokia
+                        </h4>
+                      </div>
+                      <div class="card-body"> 
+                        <img src="nokia.jpg"  style="object-fit:cover;width:100%;height:100%"/></div>
+                      <div class="card-footer">
+                        $ 100.25
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 poly-prod">
+                    <div class="card card-default">
+                      <div class="card-header">
+                        <h4 class="card-title">
+                          Nokia
+                        </h4>
+                      </div>
+                      <div class="card-body"> 
+                        <img src="nokia.jpg"  style="object-fit:cover;width:100%;height:100%"/></div>
+                      <div class="card-footer">
+                        $ 100.25
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 poly-prod">
+                    <div class="card card-default">
+                      <div class="card-header">
+                        <h4 class="card-title">
+                          Nokia
+                        </h4>
+                      </div>
+                      <div class="card-body"> 
+                        <img src="nokia.jpg"  style="object-fit:cover;width:100%;height:100%"/></div>
+                      <div class="card-footer">
+                        $ 100.25
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 poly-prod">
+                    <div class="card card-default">
+                      <div class="card-header">
+                        <h4 class="card-title">
+                          Nokia
+                        </h4>
+                      </div>
+                      <div class="card-body"> 
+                        <img src="nokia.jpg"  style="object-fit:cover;width:100%;height:100%"/></div>
+                      <div class="card-footer">
+                        $ 100.25
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 poly-prod">
+                    <div class="card card-default">
+                      <div class="card-header">
+                        <h4 class="card-title">
+                          Nokia
+                        </h4>
+                      </div>
+                      <div class="card-body"> 
+                        <img src="nokia.jpg"  style="object-fit:cover;width:100%;height:100%"/></div>
+                      <div class="card-footer">
+                        $ 100.25
+                      </div>
+                    </div>
+                </div>
+            </article>
+            <aside class="col-sm-3">
+                <div class="poly-cart">
+                    <div class="card">
+                        <div class="card-body">
+                            <form>
+                                <input placeholder="Keywords" class="form-control" />
+                            </form>
+                            <img class="col-sm-5" src="xe-day-sieu-thi-80ml-3.png"/>
+                            <ul class="col-sm-7">
+                                <li>100 items</li>
+                                <li>$56.8</li>
+                                <li><a href="#">Xem giỏ hàng</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-header">
+                            <span class="glyphicon glyphicon-th-list"></span>
+                            <strong>Chủng Loại</strong>
+                          </div>
+                          <div class="list-group">
+                            <a href="#" class="list-group-item">Điện thoại di động</a>
+                            <a href="#" class="list-group-item">Máy tính xách tay</a>
+                            <a href="#" class="list-group-item">Máy tính để bàn</a>
+                            <a href="#" class="list-group-item">Quạt máy</a>
+                            <a href="#" class="list-group-item">Tivi</a>
+                            <a href="#" class="list-group-item">Tủ lạnh</a>
+                          </div>
+                    </div>
+            </aside>
+        </div>
+
+        <footer class="card" style="margin-top: 20px;">
+            <!-- <div class="card-heading text-center">
+                <p>CodeGym &copy; 2017</p>
+            </div> -->
+            <div class = "card-header text-center">
+                <p>CodeGym &copy; 2017</p>
+            </div>
+        </footer>
+     </div>
+     </body>
+</html>

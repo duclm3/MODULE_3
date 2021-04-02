@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:after {content: " (" attr(href) ")";}
+        p{
+            text-transform:capitalize;
+        }
+        .box{
+            width: 300px;
+            height: 200px;
+            background: aqua;
+            border:solid 5px black;
+            padding: 10px; /*Khoảng cách nội dung và đường viền*/
+            margin: 200px;
+        }
+        /*
+            Độ rộng = padding trái + 
+                      padding phải + 
+                      margin trái + 
+                      margin phải + 
+                      border trái + 
+                      border phải + 
+                      context(width)
+            Tương tự với chiều dài thì các padding và margin trên dưới + height
+        */
+    </style>
+</head>
+<body>
+    <h1>The attr() Function</h1>
+
+<p>insert the value of the href attribute in parenthesis after each link:</p>
+<p>insert the value of the href attribute in parenthesis after each link:</p>
+<p>insert the value of the href attribute in parenthesis after each link:</p>
+
+<p><a href="https://www.w3schools.com">Visit W3Schools</a></p>
+<p><a href="https://www.w3schools.com/html/">Visit W3Schools' HTML tutorial</a></p>
+<div class="box-parent">
+    <div class="box">This is some text</div>
+</div>
+
+
+</body>
+</html>
