@@ -6,7 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
 <html>
 <head>
     <title>Customer List</title>
@@ -16,7 +17,7 @@
 <p>
     <a href="/customers?action=create">Create new customer</a>
 </p>
-<form method="get" action="customers">
+<form method="get" action="users">
     <input type="hidden" name="action" value="search" />
     <table border="1">
         <tr>

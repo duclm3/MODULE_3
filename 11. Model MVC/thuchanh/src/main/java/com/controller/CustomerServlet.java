@@ -8,44 +8,55 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "CustomerServlet", value = "/customers")
-public class CustomerServlet extends HttpServlet {
+public class CustomerServlet extends HttpServlet  {
     private CustomerService customerService = new CustomerServiceImpl();
+
+    public CustomerService getCustomerService() {
+        return customerService;
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            String action = request.getParameter("action");
-            if(action == null){
-                action = "";
-            }
-            switch (action){
-                case "create":
-                    showCreateForm(request, response);
-                    break;
-                case "edit":
-                    showEditForm(request, response);
-                    break;
-                case "delete":
-                    showDeleteForm(request,response);
-                    break;
-                case "view":
-                    viewCustomer(request,response);
-                    break;
-                case "search":
-                    searchCustomer(request,response);
-                    break;
-                default:
-                    listCustomers(request, response);
-                    break;
-            }
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
+        String action = request.getParameter("action");
+        if(action == null){
+            action = "";
+        }
+        switch (action){
+            case "create":
+                showCreateForm(request, response);
+                break;
+            case "edit":
+                showEditForm(request, response);
+                break;
+            case "delete":
+                showDeleteForm(request,response);
+                break;
+            case "view":
+                viewCustomer(request,response);
+                break;
+            case "search":
+                searchCustomer(request,response);
+                break;
+            default:
+                response.setContentType("text/html; charset=UTF-8");
+                response.setCharacterEncoding("UTF-8");
+                listCustomers(request, response);
+                break;
+        }
 
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
         String action = request.getParameter("action");
         if(action == null){
             action = "";
@@ -82,6 +93,8 @@ public class CustomerServlet extends HttpServlet {
     }
     // doget(hiển thị hết thông tin lên url) -> showEditForm -> edit.jsp
     private void updateCustomer(HttpServletRequest request, HttpServletResponse response) {
+        response.setContentType("text/html; charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String email = request.getParameter("email");
@@ -119,8 +132,14 @@ public class CustomerServlet extends HttpServlet {
         }
     }
 
-    private void listCustomers(HttpServletRequest request, HttpServletResponse response) {
+    private void listCustomers(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
         List<Customer> customers = this.customerService.findAll();
+        System.out.println("In trong servlet:");
+        for (int i = 0; i < customers.size(); i++) {
+            System.out.println(customers.get(i));
+        }
         request.setAttribute("customers", customers);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("customer/list.jsp");
@@ -150,8 +169,10 @@ public class CustomerServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-    //kích vào thì gọi show edit
+
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
+        response.setContentType("text/html; charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = this.customerService.findById(id);
         RequestDispatcher dispatcher;
@@ -206,7 +227,7 @@ public class CustomerServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = this.customerService.findById(id);
         RequestDispatcher dispatcher;
-        if(customer == null){
+        if (customer == null) {
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             request.setAttribute("customer", customer);
