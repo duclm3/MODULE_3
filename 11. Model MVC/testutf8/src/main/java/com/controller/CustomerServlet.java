@@ -139,12 +139,10 @@ public class CustomerServlet extends HttpServlet  {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
         List<Customer> customers = this.customerService.findAll();
-        System.out.println("In trong servlet:");
         for (int i = 0; i < customers.size(); i++) {
             System.out.println(customers.get(i));
         }
         request.setAttribute("customers", customers);
-
         RequestDispatcher dispatcher = request.getRequestDispatcher("customer/list.jsp");
         try {
             dispatcher.forward(request, response);
