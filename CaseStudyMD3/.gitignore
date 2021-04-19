@@ -1,0 +1,4 @@
+build
+.idea
+.gradle
+src/main/java/com/cakemanager/service/DatabaseConection.java
